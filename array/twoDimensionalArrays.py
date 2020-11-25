@@ -13,5 +13,23 @@ print(twoDArray)
 # print(newTwoDArray)
 
 # insert using append O(nm) 
-newTwoDArray = np.append(twoDArray, [[1,2,3,4]], axis=0 )
-print(newTwoDArray)
+# newTwoDArray = np.append(twoDArray, [[1,2,3,4]], axis=0 )
+# print(newTwoDArray)
+
+# Accessing an element Time O(1) Space O(1)
+
+# def accessElements(array, rowIndex, colIndex):
+#     if rowIndex >= len(array) and colIndex >= len(array[0]):    # O(1)
+#         print('Incorrect index')                                # O(1)
+#     else:
+#         print(array[rowIndex][colIndex])                        # O(1)
+
+
+# accessElements(twoDArray, 2, 3)
+# Traversing a Two dimensional array Time O(n^2) Space O(1)
+def traverseTDArray(array):
+    for i in range(len(array)):         # O(mn)
+        for j in range(len(array[0])):  # O(n)
+            print(array[i][j])          # O(1)
+
+traverseTDArray(twoDArray)
