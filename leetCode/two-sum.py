@@ -9,6 +9,8 @@
 # Output: [1,2]
 
 def two_sum(nums, target):
+    # stores nums as the key and 
+    # the index from the array as the value
     compliments = {}
     result = []
     for index, num in enumerate(nums):
