@@ -6,7 +6,7 @@ class Graph:
     
     def addEdge(self, vertex, edge):
         self.gdict[vertex].append(edge)
-
+    # Time O(V + E) Space O(V + E)
     def bfs(self, vertex):
         visited = [vertex]
         queue = [vertex]
@@ -17,7 +17,7 @@ class Graph:
                 if adjacentVertex not in visited:
                     visited.append(adjacentVertex) 
                     queue.append(adjacentVertex)
-
+    # Time O(V + E) Space O(V + E)
     def dfs(self, vertex):
         visited = [vertex]
         stack = [vertex]
