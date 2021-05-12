@@ -42,11 +42,21 @@ class SLinkedList:
                 nextNode = tempNode.next
                 tempNode.next = newNode
                 newNode.next = nextNode
-            
-
+                
+    # Traverse a SLL
+    def traverseSLL(self):
+        if self.head is None:
+            print("the SLL does not exist")
+        else:
+            node = self.head
+            while node is not None:
+                print(node.value)
+                node = node.next
 
 singlyLinkedList = SLinkedList()
 singlyLinkedList.insertSLL(1, 1)
 singlyLinkedList.insertSLL(2, 1)
 singlyLinkedList.insertSLL(3, 1)
+singlyLinkedList.insertSLL(4, 1)
 print([node.value for node in singlyLinkedList])
+singlyLinkedList.traverseSLL()
