@@ -44,12 +44,14 @@ class SLinkedList:
                 newNode.next = nextNode
                 
     # Traverse a SLL
+    # Time:  O(n)
+    # Space: O(1)
     def traverseSLL(self):
-        if self.head is None:
-            print("the SLL does not exist")
+        if self.head is None:                   # O(1)
+            print("the SLL does not exist")     # O(1)
         else:
-            node = self.head
-            while node is not None:
+            node = self.head                    # O(1)
+            while node is not None:             # O(n)
                 print(node.value)
                 node = node.next
 
