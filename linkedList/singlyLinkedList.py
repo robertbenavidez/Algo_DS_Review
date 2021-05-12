@@ -110,6 +110,13 @@ class SLinkedList:
                 nextNode = tempNode.next
                 tempNode.next = nextNode.next
 
+    def deleteEntireSLL(self):
+        if self.head is None:
+            print('The SLL does not exit')
+        else:
+            self.head = None
+            self.tail = None
+
 
 singlyLinkedList = SLinkedList()
 singlyLinkedList.insertSLL(1, 1)
@@ -121,5 +128,6 @@ singlyLinkedList.insertSLL(0, 4)
 print([node.value for node in singlyLinkedList])
 # singlyLinkedList.traverseSLL()
 # print(singlyLinkedList.searchSLL(0))
-singlyLinkedList.deleteNode(3)
+# singlyLinkedList.deleteNode(3)
+singlyLinkedList.deleteEntireSLL()
 print([node.value for node in singlyLinkedList])
