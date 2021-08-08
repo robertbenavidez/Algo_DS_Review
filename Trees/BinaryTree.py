@@ -19,4 +19,14 @@ def preOrderTraveral(rootNode):
     preOrderTraveral(rootNode.leftChild)
     preOrderTraveral(rootNode.rightChild)
 
-preOrderTraveral(newBT)
+# preOrderTraveral(newBT)
+
+def inOrderTraversal(rootNode):
+    if not rootNode:
+        return
+    inOrderTraversal(rootNode.leftChild)
+    print(rootNode.data)
+    inOrderTraversal(rootNode.rightChild)
+
+inOrderTraversal(newBT)
+    
